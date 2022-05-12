@@ -1,0 +1,33 @@
+version: "3"
+
+volumes:
+  mysql_data:
+
+services:
+  mysql:
+    platform: linux/x86_64
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    networks:
+      - default
+    ports:
+      - '33306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+  sample_dotbit:
+    build: .
+    command: bundle exec rails server -b 0.0.0.0
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: password
+      MYSQL_HOST: mysql
+    volumes:
+      - .:/sample_dotbit
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
+    tty: true
+    stdin_open: true
