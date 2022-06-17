@@ -1,0 +1,228 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  line-height: 1;
+  background-color: #f5f5f5;
+}
+header {
+  display: block;
+  z-index: 1000;
+}
+.site-header {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.site-header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: initial;
+}
+.wrapper {
+  max-width: 1140px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.brand {
+  font-weight: bold;
+  font-size: 20px;
+}
+.site-header__middle {
+  margin-left: auto;
+}
+.nav__toggle {
+  display: none;
+}
+.nav__wrapper {
+  display: flex;
+}
+ul {
+  list-style: none;
+}
+.nav__item a {
+  display: block;
+  padding: 1rem;
+}
+.nav__item a:hover {
+  color: #3479ca;
+}
+.guide_items {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  padding: 7px 0;
+  left: 15px;
+  width: 150px;
+}
+.nav li {
+  display: inline-block;
+  position: relative;
+}
+.guide_item {
+  padding: 7px 20px;
+  display: block;
+  text-decoration: none;
+}
+.guide_item:hover {
+  opacity: 0.8;
+  color: #3479ca;
+}
+.signup_button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  background-color: #2fa0f6;
+  min-width: 120px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+.btn_outline {
+  background: transparent;
+  color: #3479ca;
+  border: 1px solid #3479ca;
+}
+
+.bl_separate {
+  padding: 60px 20px 30px 20px;
+  background-color: #32325d;
+}
+.bl_separate_btns01 {
+  display: flex;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.bl_separate_btns01 .el_btn {
+  margin: 0 15px;
+  width: 300px;
+  height: 56px;
+  font-size: .9375rem;
+}
+.el_btn--purple {
+  background-color: #635cff;
+  color: #fff;
+}
+.el_btn {
+  display: inline-block;
+  display: flex;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  padding: 0 23px;
+  height: 40px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  font-size: .8125rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.ly_mainFooter {
+  padding: 0 24px 40px;
+  background-color: #32325d;
+  color: #a3acb9;
+  text-align: center;
+  font-size: 14px;
+  font-size: .875rem;
+}
+.bl_footerList {
+  display: flex;
+  margin: 0 auto 40px;
+  padding-top: 40px;
+  max-width: 1160px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.bl_footerList li {
+  margin: 0 28px 16px;
+}
+.bl_footerList li a {
+  color: #fff;
+}
+.bl_footerList li a:hover {
+  opacity: 0.7;
+}
+.bl_copy {
+  display: block;
+  margin-top: 35px;
+  font-size: 12px;
+  font-size: .75rem;
+}
+
+.btn2,
+a.btn2,
+button.btn2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-c {
+  position: relative;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  color: #fff;
+  border-radius: 100vh;
+  background: #3479ca;
+  box-shadow: 0 5px 0 #1d61ae;
+}
+
+a.btn-c span {
+  color: #fff100;
+}
+
+a.btn-c small {
+  font-weight: bold;
+}
+
+a.btn-c i {
+  margin-right: 1rem;
+}
+
+a.btn-c:hover {
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+
+  color: #fff;
+  background: #ee7f8b;
+  -webkit-box-shadow: 0 2px 0 #e85163;
+  box-shadow: 0 2px 0 #e85163;
+}
