@@ -1,0 +1,32 @@
+<div class="main">
+  <div class="form-wrapper">
+    <h2 class="login-title">ログイン</h2>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-item">
+        <i class="fa-solid fa-envelope"></i><%= f.label :メールアドレス %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "dotbit@example.com" %>
+      </div>
+
+      <div class="form-item input-wrap">
+        <i class="fa-solid fa-key"></i><%= f.label :パスワード %><br />
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "password" %>
+        <i class="toggle-pass fa fa-eye-slash"></i>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :次回から入力を省略する %>
+        </div>
+      <% end %>
+
+      <div class="button-panel">
+        <%= f.submit "ログイン" %>
+      </div>
+    <% end %>
+    <div class="form-footer">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

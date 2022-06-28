@@ -2,25 +2,45 @@
   <div class="wrapper site-header__wrapper">
     <div class="site-header__start">
       <%= link_to "IT案件・人材 情報案内",'/', class:'brand' %>
-      <%# <a href="#" class="brand">IT案件・人材 情報案内</a> %>
     </div>
-    <div class="site-header__middle">
-      <nav class="nav">
-        <ul class="nav__wrapper">
-          <li class="nav__item"><a href="#"><i class="fa-solid fa-magnifying-glass"></i>案件を探す</a></li>
-          <li class="nav__item"><a href="#"><i class="fa-solid fa-sitemap"></i>ご利用ガイド</a>
-            <ul class="guide_items">
-              <li><a class="guide_item" href="#">料金プラン</a></li>
-              <li><a class="guide_item" href="#">サービス詳細</a></li>
-              <li><a class="guide_item" href="#">お問い合わせ</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="site-header__end">
-      <a class="btn signup_button btn_outline" href="#">ログイン</a>
-      <a class="btn signup_button" href="#">新規登録</a>
-    </div>
+    <% if user_signed_in? %>
+    <!-- ユーザーがログインしていた時の処理 -->
+      <div class="site-header__middle">
+        <nav class="nav">
+          <ul class="nav__wrapper">
+            <li class="nav__item"><a href="#"><i class="fa-solid fa-magnifying-glass"></i>案件を探す</a></li>
+            <li class="nav__item"><a href="#"><i class="fa-solid fa-envelope"></i>メッセージ</a></li>
+            <li class="nav__item"><a href="#"><i class="fa-solid fa-circle-user"></i><%= current_user.name %></a>
+              <ul class="guide_items">
+                <li><a class="guide_item" href="#">プロフィール</a></li>
+                <li><a class="guide_item" href="#">レジュメ管理</a></li>
+                <li><a class="guide_item" href="#">案件管理</a></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <% else %>
+      <!-- ユーザーがログインしていなかった時の処理 -->
+      <div class="site-header__middle">
+        <nav class="nav">
+          <ul class="nav__wrapper">
+            <li class="nav__item"><a href="#"><i class="fa-solid fa-magnifying-glass"></i>案件を探す</a></li>
+            <li class="nav__item"><a href="#"><i class="fa-solid fa-sitemap"></i>ご利用ガイド</a>
+              <ul class="guide_items">
+                <li><a class="guide_item" href="#">料金プラン</a></li>
+                <li><a class="guide_item" href="#">サービス詳細</a></li>
+                <li><a class="guide_item" href="#">お問い合わせ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-header__end">
+        <%= link_to "ログイン", new_user_session_path, class: 'btn signup_button btn_outline' %>
+        <%= link_to "新規登録", new_user_registration_path, class: 'btn signup_button' %>
+      </div>
+    <% end %>
   </div>
 </header>
